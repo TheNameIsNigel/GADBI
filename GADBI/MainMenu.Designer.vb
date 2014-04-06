@@ -22,6 +22,7 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,12 +39,17 @@ Partial Class MainMenu
         Me.AndroidCentralThreadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Process1 = New System.Diagnostics.Process()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.RebootDeviceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RebootToBootloaderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RebootToDownloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RebootToRecoveryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RebootToSystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.LinksToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.LinksToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(997, 24)
@@ -83,6 +89,7 @@ Partial Class MainMenu
         '
         'ToolsToolStripMenuItem
         '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RebootDeviceToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
@@ -150,6 +157,37 @@ Partial Class MainMenu
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Device"
         '
+        'RebootDeviceToolStripMenuItem
+        '
+        Me.RebootDeviceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RebootToBootloaderToolStripMenuItem, Me.RebootToDownloadToolStripMenuItem, Me.RebootToRecoveryToolStripMenuItem, Me.RebootToSystemToolStripMenuItem})
+        Me.RebootDeviceToolStripMenuItem.Name = "RebootDeviceToolStripMenuItem"
+        Me.RebootDeviceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RebootDeviceToolStripMenuItem.Text = "Reboot Device"
+        '
+        'RebootToBootloaderToolStripMenuItem
+        '
+        Me.RebootToBootloaderToolStripMenuItem.Name = "RebootToBootloaderToolStripMenuItem"
+        Me.RebootToBootloaderToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.RebootToBootloaderToolStripMenuItem.Text = "Reboot to Bootloader"
+        '
+        'RebootToDownloadToolStripMenuItem
+        '
+        Me.RebootToDownloadToolStripMenuItem.Name = "RebootToDownloadToolStripMenuItem"
+        Me.RebootToDownloadToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.RebootToDownloadToolStripMenuItem.Text = "Reboot to Download"
+        '
+        'RebootToRecoveryToolStripMenuItem
+        '
+        Me.RebootToRecoveryToolStripMenuItem.Name = "RebootToRecoveryToolStripMenuItem"
+        Me.RebootToRecoveryToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.RebootToRecoveryToolStripMenuItem.Text = "Reboot to Recovery"
+        '
+        'RebootToSystemToolStripMenuItem
+        '
+        Me.RebootToSystemToolStripMenuItem.Name = "RebootToSystemToolStripMenuItem"
+        Me.RebootToSystemToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.RebootToSystemToolStripMenuItem.Text = "Reboot to System"
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -157,8 +195,10 @@ Partial Class MainMenu
         Me.ClientSize = New System.Drawing.Size(997, 492)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Graphical Android Debugging Bridge Interface"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -182,5 +222,10 @@ Partial Class MainMenu
     Friend WithEvents AndroidCentralThreadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RebootDeviceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RebootToBootloaderToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RebootToDownloadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RebootToRecoveryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RebootToSystemToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
