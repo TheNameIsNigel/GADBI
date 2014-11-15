@@ -12,10 +12,10 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("GADBI")> 
 <Assembly: AssemblyDescription("Graphical Android Debugging Bridge Interface")> 
-<Assembly: AssemblyCompany("GoLabs Technologies")> 
+<Assembly: AssemblyCompany("Norris Solutions, LLC.")> 
 <Assembly: AssemblyProduct("GADBI")> 
-<Assembly: AssemblyCopyright("Copyright © 2014 Norris Enterprises. All Rights Reserved.")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyCopyright("Copyright © 2015 Norris Solutions, LLC. All Rights Reserved.")> 
+<Assembly: AssemblyTrademark("GoLabs Media is a registered subsidary of Norris Solutions, LLC.")> 
 
 <Assembly: ComVisible(True)> 
 
@@ -33,7 +33,7 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("2.0.0.1")> 
+<Assembly: AssemblyFileVersion("2.0.0.1")> 
 
 <Assembly: NeutralResourcesLanguageAttribute("en-US")> 
