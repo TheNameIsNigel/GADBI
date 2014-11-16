@@ -133,6 +133,10 @@ Public Class MainMenu
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Console.WriteLine("Waiting For Device...")
         android.WaitForDevice()
-        android.Backup()
+
+    End Sub
+
+    Private Sub CreditsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CreditsToolStripMenuItem1.Click
+        Credits.ShowDialog()
     End Sub
 End Class
