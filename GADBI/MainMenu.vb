@@ -132,5 +132,6 @@ Public Class MainMenu
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Console.WriteLine("Waiting For Device...")
         android.WaitForDevice()
+        android.Backup()
     End Sub
 End Class
