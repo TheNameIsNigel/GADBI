@@ -16,6 +16,8 @@ Public Class MainMenu
         android = AndroidController.Instance
         android.UpdateDeviceList()
         ListBox1.Items.Clear()
+        Label4.Text = device.BuildProp.GetProp(ListBox1.SelectedItem.ToString())
+
 
 
         If android.HasConnectedDevices Then
@@ -26,8 +28,7 @@ Public Class MainMenu
             ListBox1.Items.AddRange(device.BuildProp.Keys.ToArray)
 
             'So no items are selected right away
-            ListBox1.SelectedIndex = 6
-
+            ListBox1.SelectedValue = "ro.build.product"
         End If
     End Sub
 
@@ -125,6 +126,15 @@ Public Class MainMenu
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+    End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Console.WriteLine("Waiting For Device...")
+        android.WaitForDevice()
+        'This will wait until a device is connected to the computer
+    End Sub
+    Public Sub NullReferencFromUninitializedLocalVariable()
+        Dim engine As StringInfo
+        Console.WriteLine(engine.ToString())
     End Sub
 End Class

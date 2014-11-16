@@ -88,13 +88,13 @@ Partial Class MainMenu
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.LoginToolStripMenuItem.Text = "Login..."
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -338,7 +338,7 @@ Partial Class MainMenu
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 42)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "Mount /system as R/W"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'ListBox1
