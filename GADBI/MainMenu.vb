@@ -16,7 +16,6 @@ Public Class MainMenu
         android = AndroidController.Instance
         android.UpdateDeviceList()
         ListBox1.Items.Clear()
-        Label4.Text = device.BuildProp.GetProp(ListBox1.SelectedItem.ToString())
 
 
 
@@ -126,15 +125,12 @@ Public Class MainMenu
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        Label4.Text = device.BuildProp.GetProp(ListBox1.SelectedItem.ToString())
+        ListBox1.Items.Clear()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Console.WriteLine("Waiting For Device...")
         android.WaitForDevice()
-        'This will wait until a device is connected to the computer
-    End Sub
-    Public Sub NullReferencFromUninitializedLocalVariable()
-        Dim engine As StringInfo
-        Console.WriteLine(engine.ToString())
     End Sub
 End Class
